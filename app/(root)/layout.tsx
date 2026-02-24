@@ -1,11 +1,15 @@
 import Navbar from "@/components/custom/Navbar";
+import Footer from "@/components/custom/Footer";
+import WhatsAppButton from "@/components/custom/WhatsAppButton";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main>
+    <div className="flex min-h-screen flex-col bg-brand-bg font-sans">
       <Navbar />
-      {children}
-    </main>
+      <main className="flex-1">{children}</main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
 };
 

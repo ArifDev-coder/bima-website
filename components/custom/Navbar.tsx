@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, Egg } from "lucide-react"; // Tambah icon Egg biar lucu
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -25,11 +25,13 @@ export default function Navbar() {
 
   // Close on Click Outside
   useEffect(() => {
-    const handleClick = (e: ) => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as Node;
+
       if (
         isMobileMenuOpen &&
-        !menuRef.current?.contains(e.target) &&
-        !toggleRef.current?.contains(e.target)
+        !menuRef.current?.contains(target) &&
+        !toggleRef.current?.contains(target)
       ) {
         closeMenu();
       }
@@ -70,13 +72,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          {/* Tombol Admin Simple */}
-          <Link
-            href="/login"
-            className="ml-4 px-5 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-black hover:bg-white transition-colors"
-          >
-            LOGIN
-          </Link>
         </div>
 
         {/* Mobile Toggle */}

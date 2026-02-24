@@ -1,5 +1,5 @@
 import Image from "next/image"; // Import ini wajib!
-import { ShoppingCart, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ShoppingCart, ArrowRight } from "lucide-react";
 import HeroEgg from "@/public/Home/heroegg.jpg";
 
 export default function Hero() {
