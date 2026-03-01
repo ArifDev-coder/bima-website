@@ -17,7 +17,8 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-brand-accent/80 text-sm leading-relaxed">
-            Menyediakan telur segar berkualitas tinggi langsung dari peternakan ke meja makan Anda sejak 2010.
+            Menyediakan telur segar berkualitas tinggi langsung dari peternakan
+            ke meja makan Anda sejak 2010.
           </p>
         </div>
 
@@ -25,10 +26,35 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-bold text-lg mb-6">Menu</h3>
           <ul className="space-y-3 text-sm">
-            <li><Link href="/" className="hover:text-white transition-colors">Beranda</Link></li>
-            <li><Link href="/produk" className="hover:text-white transition-colors">Produk Kami</Link></li>
-            <li><Link href="/tentang" className="hover:text-white transition-colors">Tentang Kami</Link></li>
-            <li><Link href="/kontak" className="hover:text-white transition-colors">Hubungi Kami</Link></li>
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">
+                Beranda
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/produk"
+                className="hover:text-white transition-colors"
+              >
+                Produk Kami
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/tentang"
+                className="hover:text-white transition-colors"
+              >
+                Tentang Kami
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/kontak"
+                className="hover:text-white transition-colors"
+              >
+                Hubungi Kami
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,11 +80,17 @@ export default function Footer() {
           <ul className="space-y-4 text-sm">
             <li className="flex items-start gap-3">
               <MapPin size={18} className="mt-0.5 text-brand-primary" />
-              <span>Jl. Peternakan No. 88, Kecamatan Sukamaju, Bogor, Jawa Barat</span>
+              <span>
+                Jl. Peternakan No. 88, Kecamatan Sukamaju, Bogor, Jawa Barat
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-brand-primary" />
-              <span>+62 812-3456-7890</span>
+              <span>+62 lupa</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone size={18} className="text-brand-primary" />
+              <span>+62 lupa</span>
             </li>
           </ul>
         </div>
