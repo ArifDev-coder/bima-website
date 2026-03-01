@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Egg, Facebook, Instagram, Twitter, Phone, MapPin, Mail } from "lucide-react";
+import { Egg, Phone, MapPin, Mail } from "lucide-react";
+import { products } from "@/data/produk";
 
 export default function Footer() {
   return (
@@ -18,11 +19,6 @@ export default function Footer() {
           <p className="text-brand-accent/80 text-sm leading-relaxed">
             Menyediakan telur segar berkualitas tinggi langsung dari peternakan ke meja makan Anda sejak 2010.
           </p>
-          <div className="flex gap-4 pt-2">
-            <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Twitter size={20} /></a>
-          </div>
         </div>
 
         {/* Quick Links */}
@@ -40,10 +36,15 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-bold text-lg mb-6">Produk</h3>
           <ul className="space-y-3 text-sm">
-            <li><Link href="/produk" className="hover:text-white transition-colors">Telur Ayam Ras</Link></li>
+            {products.slice(0, 4).map((prod) => (
+              <li key={prod.id}>
+                <Link href="/produk">{prod.name}</Link>
+              </li>
+            ))}
+            {/* <li><Link href="/produk" className="hover:text-white transition-colors">Telur Ayam Ras</Link></li>
             <li><Link href="/produk" className="hover:text-white transition-colors">Telur Omega 3</Link></li>
             <li><Link href="/produk" className="hover:text-white transition-colors">Telur Kampung</Link></li>
-            <li><Link href="/produk" className="hover:text-white transition-colors">Telur Asin</Link></li>
+            <li><Link href="/produk" className="hover:text-white transition-colors">Telur Asin</Link></li> */}
           </ul>
         </div>
 
@@ -58,10 +59,6 @@ export default function Footer() {
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-brand-primary" />
               <span>+62 812-3456-7890</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={18} className="text-brand-primary" />
-              <span>halo@bimaeggs.com</span>
             </li>
           </ul>
         </div>

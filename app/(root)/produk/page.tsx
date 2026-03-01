@@ -1,49 +1,11 @@
 import { Egg, Check, ShoppingCart } from "lucide-react";
+import { products } from "@/data/produk";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Produk Telur Segar | Bima Eggs",
   description: "Cek katalog telur ayam ras, omega 3, telur kampung, dan telur asin berkualitas tinggi dari Bima Eggs.",
 };
-
-const products = [
-  {
-    id: 1,
-    name: "Telur Ayam Ras Grade A",
-    description: "Telur pilihan dengan cangkang kuat dan kuning telur berwarna oranye cerah. Sempurna untuk kue dan masakan sehari-hari.",
-    price: "Rp 26.500 / kg",
-    features: ["Cangkang Bersih", "Kuning Telur Pekat", "Segar < 3 Hari"],
-    badge: "Terlaris",
-    color: "bg-orange-100",
-  },
-  {
-    id: 2,
-    name: "Telur Omega 3",
-    description: "Diperkaya dengan Omega 3 alami dari pakan khusus biji rami. Pilihan sehat untuk perkembangan otak anak.",
-    price: "Rp 32.000 / pack (10 butir)",
-    features: ["Tinggi Omega 3", "Rendah Kolesterol", "Bebas Antibiotik"],
-    badge: "Premium",
-    color: "bg-amber-100",
-  },
-  {
-    id: 3,
-    name: "Telur Ayam Kampung Asli",
-    description: "Dari ayam kampung yang dipelihara secara free-range. Rasa lebih gurih dan tekstur putih telur lebih kenyal.",
-    price: "Rp 3.500 / butir",
-    features: ["Free Range", "Rasa Gurih Alami", "Tinggi Protein"],
-    badge: null,
-    color: "bg-yellow-50",
-  },
-  {
-    id: 4,
-    name: "Telur Asin Masir",
-    description: "Telur bebek pilihan yang diasinkan dengan garam laut murni dan abu gosok. Kuningnya berminyak dan masir.",
-    price: "Rp 4.000 / butir",
-    features: ["Masir & Berminyak", "Tidak Terlalu Asin", "Tahan Lama"],
-    badge: "Favorit",
-    color: "bg-blue-50",
-  },
-];
 
 export default function Produk() {
   return (
