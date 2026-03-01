@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Egg, Phone, MapPin, Mail } from "lucide-react";
 import { products } from "@/data/produk";
+import { PhoneNumberFormat } from "@/lib/tools/PhoneNumberFormat";
+import { NoWa1, NoWa2 } from "@/data/NoWa";
 
 export default function Footer() {
   return (
@@ -86,11 +88,11 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-brand-primary" />
-              <span>+62 lupa</span>
+              <span>+62 {PhoneNumberFormat(NoWa1, "-")}</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-brand-primary" />
-              <span>+62 lupa</span>
+              <span>+62 {PhoneNumberFormat(NoWa2, "-")}</span>
             </li>
           </ul>
         </div>

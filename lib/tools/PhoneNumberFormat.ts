@@ -1,15 +1,13 @@
-export const PhoneNumberFormat = (val: string) => {
-  if (!val) return val;
+export const PhoneNumberFormat = (val: string, separator: string) => {
+  if (!val) return "";
 
-  const phoneNumber = val.replace(/[*\d]/g, "");
+  const cleaned = ("" + val).replace(/\D/g, "");
 
-  const phoneNumberLength = phoneNumber.length;
+  const match = cleaned.match(/^(\d{3})(\d{4})(\d{3,5})$/);
 
-  if (phoneNumberLength < 5) return phoneNumber;
-
-  if (phoneNumberLength < 9) {
-    return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(4)}`;
+  if (match) {
+    return `${match[1]}${separator}${match[2]}${separator}${match[3]}`;
   }
 
-  return `${phoneNumber.slice(0, 4)}-${phoneNumber.slice(4, 8)}-${phoneNumber.slice(8,12)}`
+  return cleaned;
 };
