@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Egg, Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { products } from "@/data/produk";
 import { PhoneNumberFormat } from "@/lib/tools/PhoneNumberFormat";
 import Image from "next/image";

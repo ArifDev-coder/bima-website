@@ -3,8 +3,11 @@
 import { Check, ShoppingCart } from "lucide-react";
 import { products } from "@/data/produk";
 import Image from "next/image";
+import { useCart } from "@/lib/context/CartContext";
 
 const Products = () => {
+  const { addToCart } = useCart();
+
   return (
     <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {products.map((product) => (
@@ -47,7 +50,10 @@ const Products = () => {
               <span className="text-lg font-bold text-brand-primary">
                 {product.price}
               </span>
-              <button className="bg-brand-secondary hover:bg-brand-primary text-white p-2 rounded-lg transition-colors">
+              <button 
+                onClick={() => addToCart(product)}
+                className="bg-brand-secondary hover:bg-brand-primary text-white p-2 rounded-lg transition-colors"
+              >
                 <ShoppingCart size={20} />
               </button>
             </div>

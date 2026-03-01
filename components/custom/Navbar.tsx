@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react"; // Tambah icon Egg biar lucu
+import { Menu, X, ShoppingCart } from "lucide-react"; // Tambah icon Egg biar lucu
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { useCart } from "@/lib/context/CartContext";
+import CartDrawer from "./CartDrawer";
 
 import BrandLogo from "@/public/Logo/brandlogo.png";
 
@@ -19,9 +21,11 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const { totalItems } = useCart();
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -80,14 +84,30 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          ref={toggleRef}
-          onClick={toggleMenu}
-          className="md:hidden p-2 text-stone-900 hover:bg-black/5 rounded-lg transition-colors"
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Actions */}
+        <div className="flex items-center gap-2">
+          {/* Cart Button */}
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 text-stone-900 hover:bg-black/5 rounded-lg transition-colors group"
+          >
+            <ShoppingCart size={24} />
+            {totalItems > 0 && (
+              <span className="absolute -top-1 -right-1 bg-brand-primary text-white text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full border-2 border-amber-500 shadow-sm group-hover:scale-110 transition-transform">
+                {totalItems}
+              </span>
+            )}
+          </button>
+
+          {/* Mobile Toggle */}
+          <button
+            ref={toggleRef}
+            onClick={toggleMenu}
+            className="md:hidden p-2 text-stone-900 hover:bg-black/5 rounded-lg transition-colors"
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -118,6 +138,8 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </nav>
   );
 }

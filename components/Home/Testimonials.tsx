@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -42,7 +41,7 @@ export default function Testimonials() {
                   <Star key={i} size={16} fill={i < item.rating ? "currentColor" : "none"} strokeWidth={i < item.rating ? 0 : 2} className={i < item.rating ? "" : "text-gray-300"} />
                 ))}
               </div>
-              <p className="text-stone-600 mb-6 italic">"{item.quote}"</p>
+              <p className="text-stone-600 mb-6 italic">&quot;{item.quote}&quot;</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center font-bold text-brand-secondary">
                   {item.name[0]}

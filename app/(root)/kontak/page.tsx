@@ -42,8 +42,8 @@ export default function Kontak() {
                   <h3 className="font-bold text-stone-800">
                     Telepon / WhatsApp
                   </h3>
-                  <p className="text-stone-600 text-sm">+62 {PhoneNumberFormat(NoWa1)}</p>
-                  <p className="text-stone-600 text-sm">+62 {PhoneNumberFormat(NoWa2)}</p>
+                  <p className="text-stone-600 text-sm">+62 {PhoneNumberFormat(NoWa1, "-")}</p>
+                  <p className="text-stone-600 text-sm">+62 {PhoneNumberFormat(NoWa2, "-")}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
