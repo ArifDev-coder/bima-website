@@ -2,7 +2,10 @@ import Link from "next/link";
 import { Egg, Phone, MapPin, Mail } from "lucide-react";
 import { products } from "@/data/produk";
 import { PhoneNumberFormat } from "@/lib/tools/PhoneNumberFormat";
+import Image from "next/image";
+
 import { NoWa1, NoWa2 } from "@/data/NoWa";
+import BrandLogo from "@/public/Logo/brandlogo.png"
 
 export default function Footer() {
   return (
@@ -12,10 +15,13 @@ export default function Footer() {
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <div className="bg-brand-primary p-1.5 rounded-lg">
-              <Egg className="w-6 h-6 text-brand-secondary" />
+              <Image src={BrandLogo} alt="Brand Logo" placeholder="blur" className="object-contain"
+                          width={60}
+                          height={60}
+                          />
             </div>
             <span className="font-black text-xl tracking-tight text-white">
-              BIMA <span className="text-brand-primary">EGGS</span>
+              Juragan <span className="text-brand-primary">Telur</span>
             </span>
           </div>
           <p className="text-brand-accent/80 text-sm leading-relaxed">
@@ -99,7 +105,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-brand-accent/20 text-center text-xs text-brand-accent/60">
-        <p>&copy; {new Date().getFullYear()} Bima Eggs. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Juragan Telur. Hak Cipta Dilindungi.</p>
       </div>
     </footer>
   );

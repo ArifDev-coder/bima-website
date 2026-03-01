@@ -1,3 +1,5 @@
+import TelurAyam from "@/public/Products/TelurAyam.png"
+
 export const products = [
   {
     id: 1,
@@ -8,5 +10,6 @@ export const products = [
     features: ["Cangkang Bersih", "Kuning Telur Pekat", "Segar < 3 Hari"],
     badge: "Terlaris",
     color: "bg-orange-100",
+    picture: TelurAyam
   },
 ];

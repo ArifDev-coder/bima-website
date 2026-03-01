@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Menu, X, Egg } from "lucide-react"; // Tambah icon Egg biar lucu
+import { Menu, X } from "lucide-react"; // Tambah icon Egg biar lucu
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+
+import BrandLogo from "@/public/Logo/brandlogo.png";
 
 // Sesuaikan menu dengan jualan telur
 const NAV_ITEMS = [
@@ -45,11 +48,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-white p-1.5 rounded-lg shadow-sm group-hover:rotate-12 transition-transform">
-            <Egg className="w-6 h-6 text-amber-600" />
+          <div className="p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
+            <Image src={BrandLogo} alt="Brand Logo" placeholder="blur" className="object-contain"
+            width={60}
+            height={60}
+            />
           </div>
           <span className="font-black text-xl tracking-tight text-stone-900">
-            BIMA <span className="text-white">EGGS</span>
+            Juragan <span className="text-white">Telur</span>
           </span>
         </Link>
 

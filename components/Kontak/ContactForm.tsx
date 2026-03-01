@@ -17,13 +17,11 @@ const ContactForm = () => {
     setIsSubmit(true);
 
     try {
-      const text = `Halo Admin, saya *${name}* ingin menanyakan tentang *${formData.subjek}*.\n\n*Pesan:* \n${formData.pesan}`;
+      const text = `https://wa.me/62${NoWa1}?text=┌───────────────┐%0A%20%20%20%20%20*PESAN%20BARU*%0A└───────────────┘%0A%0A*Nama%3A*%20${formData.nama}%0A*Subjek%3A*%20${formData.subjek}%0A%0A*Isi%20Pesan%3A*%0A_____________________%0A%0A${
+        formData.pesan
+      }%0A${Date.now()}%0A_____________________`;
 
-      window.open(
-        `https://wa.me/62${NoWa1}?text=┌───────────────┐%0A%20%20%20%20%20*PESAN%20BARU*%0A└───────────────┘%0A%0A*Nama%3A*%20${formData.nama}%0A*Subjek%3A*%20${formData.subjek}%0A%0A*Isi%20Pesan%3A*%0A_____________________%0A%0A${
-          formData.pesan
-        }%0A_____________________`,
-      );
+      window.open(text);
     } catch {
       setError("Gagal mengirim pesanan. Periksa koneksi internet Anda.");
     } finally {
