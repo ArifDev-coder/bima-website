@@ -8,13 +8,15 @@ export const metadata: Metadata = {
 
 export default function Produk() {
   return (
-    <div className="bg-stone-50 min-h-screen pb-20">
-      <div className="bg-brand-secondary text-white py-16 text-center mb-12">
+    <div className="bg-stone-50 min-h-screen pb-20 overflow-x-hidden">
+      <div className="bg-brand-secondary text-white py-16 text-center mb-12" data-aos="fade-down">
         <h1 className="text-4xl font-extrabold mb-2">Katalog Produk</h1>
         <p className="text-brand-accent">Pilihan telur terbaik untuk kebutuhan nutrisi Anda.</p>
       </div>
 
-      <Products />
+      <div data-aos="fade-up">
+        <Products />
+      </div>
     </div>
   );
 }

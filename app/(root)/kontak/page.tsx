@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 
 export default function Kontak() {
   return (
-    <div className="bg-white min-h-screen">
-      <div className="bg-brand-secondary text-white py-16 text-center mb-12">
+    <div className="bg-white min-h-screen overflow-x-hidden">
+      <div className="bg-brand-secondary text-white py-16 text-center mb-12" data-aos="fade-down">
         <h1 className="text-4xl font-extrabold mb-2">Hubungi Kami</h1>
         <p className="text-brand-accent">Kami siap membantu kebutuhan Anda.</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-2 gap-12">
         {/* Contact Info */}
-        <div className="space-y-8">
+        <div className="space-y-8" data-aos="fade-right">
           <div className="bg-brand-bg p-8 rounded-2xl border border-brand-accent">
             <h2 className="text-2xl font-bold text-brand-secondary mb-6">
               Informasi Kontak
@@ -67,7 +67,9 @@ export default function Kontak() {
           </div>
         </div>
 
-        <ContactForm />
+        <div data-aos="fade-left">
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
