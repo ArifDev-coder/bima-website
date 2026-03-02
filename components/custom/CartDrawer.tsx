@@ -44,7 +44,7 @@ ${cart
       {/* Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/50 z-100 transition-opacity duration-300",
+          "fixed inset-0 bg-black/50 z-100 transition-opacity duration-300 h-screen w-screen",
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
@@ -53,7 +53,7 @@ ${cart
       {/* Drawer */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-full w-full max-w-md bg-white z-[101] shadow-2xl transition-transform duration-300 ease-in-out transform flex flex-col",
+          "fixed top-0 right-0 h-screen w-full max-w-md bg-white z-101 shadow-2xl transition-transform duration-300 ease-in-out transform flex flex-col",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -89,7 +89,7 @@ ${cart
                   key={item.id}
                   className="flex gap-4 items-center pb-6 border-b border-stone-100 last:border-0"
                 >
-                  <div className="relative h-20 w-20 rounded-xl overflow-hidden bg-stone-100 flex-shrink-0">
+                  <div className="relative h-20 w-20 rounded-xl overflow-hidden bg-stone-100 shrink-0">
                     <Image
                       src={item.picture}
                       alt={item.name}
