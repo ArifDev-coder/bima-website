@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/lib/context/CartContext";
+import { AOSProvider } from "@/components/providers/AOSProvider";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -9,8 +11,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bima Telur",
-  description: "Bima Suka Telur",
+  title: "Juragan Telur",
+  description: "Juragan Telur",
 };
 
 export default function RootLayout({
@@ -20,8 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakartaSans.variable} antialiased`}>
-        {children}
+      <body className={`${plusJakartaSans.className} antialiased`}>
+        <AOSProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </AOSProvider>
       </body>
     </html>
   );

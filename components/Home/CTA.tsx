@@ -12,7 +12,7 @@ export default function CTA() {
         <div className="relative z-10">
           <h2 className="text-3xl md:text-5xl font-black mb-6">Siap Menyajikan Telur Segar Hari Ini?</h2>
           <p className="text-brand-accent text-lg mb-10 max-w-2xl mx-auto font-medium">
-            Jangan kompromi dengan kualitas. Berikan yang terbaik untuk keluarga Anda dengan telur pilihan dari Bima Eggs.
+            Jangan kompromi dengan kualitas. Berikan yang terbaik untuk keluarga Anda dengan telur pilihan dari Juragan Telur.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

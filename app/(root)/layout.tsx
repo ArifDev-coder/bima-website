@@ -4,7 +4,7 @@ import WhatsAppButton from "@/components/custom/WhatsAppButton";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex min-h-screen flex-col bg-brand-bg font-sans">
+    <div className="flex min-h-screen flex-col bg-brand-bg">
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
