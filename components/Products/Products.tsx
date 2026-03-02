@@ -23,7 +23,7 @@ const Products = () => {
                 {product.badge}
               </span>
             )}
-            <Image src={product.picture} className="object-cover" alt={product.name}/>
+            <Image src={product.picture} className="object-cover" alt={product.name} fill/>
           </div>
 
           <div className="p-6 flex-1 flex flex-col">
