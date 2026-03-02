@@ -57,7 +57,7 @@ export default function Navbar() {
               <Image
                 src={BrandLogo}
                 alt="Brand Logo"
-                placeholder="blur"
+                placeholder="empty"
                 className="object-contain"
                 width={60}
                 height={60}
