@@ -6,6 +6,7 @@ import { X, Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import Image from "next/image";
 import { NoWa1 } from "@/data/NoWa";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -79,7 +80,7 @@ ${cart
                 onClick={onClose}
                 className="text-brand-primary font-bold hover:underline"
               >
-                Mulai Belanja
+                <Link href="/produk">Mulai Belanja</Link>
               </button>
             </div>
           ) : (
