@@ -28,13 +28,15 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const message = `Halo Juragan Telur, saya ingin memesan:
 
 ${cart
-      .map(
-        (item) =>
-          `- ${item.name} (${item.quantity} kg) - Rp ${(
-            item.price * item.quantity
-          ).toLocaleString("id-ID")}`
-      )
-      .join("\n")}\n\n*Total: Rp ${totalPrice.toLocaleString("id-ID")}*\n\nMohon diproses ya, terima kasih!`;
+  .map(
+    (item) =>
+      `- ${item.name} (${item.quantity} kg) - Rp ${(
+        item.price * item.quantity
+      ).toLocaleString("id-ID")}`,
+  )
+  .join(
+    "\n",
+  )}\n\n*Total: Rp ${totalPrice.toLocaleString("id-ID")}*\n\nMohon diproses ya, terima kasih!`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/62${NoWa1}?text=${encodedMessage}`, "_blank");
@@ -46,7 +48,7 @@ ${cart
       <div
         className={cn(
           "fixed inset-0 bg-black/50 z-100 transition-opacity duration-300 h-screen w-screen",
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none",
         )}
         onClick={onClose}
       />
@@ -55,7 +57,7 @@ ${cart
       <div
         className={cn(
           "fixed top-0 right-0 h-screen w-full max-w-md bg-white z-101 shadow-2xl transition-transform duration-300 ease-in-out transform flex flex-col",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
         <div className="p-6 border-b flex items-center justify-between bg-brand-secondary text-white">
@@ -95,6 +97,7 @@ ${cart
                       src={item.picture}
                       alt={item.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover"
                     />
                   </div>
@@ -106,7 +109,9 @@ ${cart
                     <div className="flex items-center gap-3 mt-2">
                       <div className="flex items-center border rounded-lg">
                         <button
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity - 1)
+                          }
                           className="p-1 hover:bg-stone-50 transition-colors"
                         >
                           <Minus size={16} />
@@ -115,7 +120,9 @@ ${cart
                           {item.quantity}
                         </span>
                         <button
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity + 1)
+                          }
                           className="p-1 hover:bg-stone-50 transition-colors"
                         >
                           <Plus size={16} />
