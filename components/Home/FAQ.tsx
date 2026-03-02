@@ -11,10 +11,10 @@ const faqs = [
   },
   {
     q: "Berapa minimal pembelian untuk layanan antar?",
-    a: "Untuk wilayah Bogor kota, minimal pembelian adalah 1 kg. Untuk wilayah luar kota, silakan hubungi admin WhatsApp kami."
+    a: "Untuk wilayah Gempol dan sekitarnya, minimal pembelian adalah 1 kg. Untuk wilayah luar kota, silakan hubungi admin WhatsApp kami."
   },
   {
-    q: "Apakah Bima Eggs melayani pembelian grosir?",
+    q: "Apakah Juragan Telur melayani pembelian grosir?",
     a: "Tentu! Kami melayani suplai rutin untuk katering, restoran, dan toko kelontong dengan harga khusus grosir."
   }
 ];

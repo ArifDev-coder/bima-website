@@ -10,7 +10,7 @@ const testimonials = [
   {
     name: "Pak Budi",
     role: "Pengusaha Martabak",
-    quote: "Kualitas telur Bima Eggs konsisten. Ukurannya besar-besar dan jarang ada yang pecah saat pengiriman.",
+    quote: "Kualitas telur Juragan Telur konsisten. Ukurannya besar-besar dan jarang ada yang pecah saat pengiriman.",
     rating: 5,
   },
   {

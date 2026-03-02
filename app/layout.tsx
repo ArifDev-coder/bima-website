@@ -11,8 +11,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bima Telur",
-  description: "Bima Suka Telur",
+  title: "Juragan Telur",
+  description: "Juragan Telur",
 };
 
 export default function RootLayout({

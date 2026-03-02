@@ -5,9 +5,9 @@ import { Phone, MapPin, Clock } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hubungi Bima Eggs | Layanan Pelanggan",
+  title: "Hubungi Juragan Telur | Layanan Pelanggan",
   description:
-    "Ada pertanyaan atau ingin memesan telur? Hubungi tim Bima Eggs melalui WhatsApp, telepon, atau email.",
+    "Ada pertanyaan atau ingin memesan telur? Hubungi tim Juragan Telur melalui WhatsApp.",
 };
 
 export default function Kontak() {
@@ -31,8 +31,8 @@ export default function Kontak() {
                 <div>
                   <h3 className="font-bold text-stone-800">Alamat Kami</h3>
                   <p className="text-stone-600 text-sm">
-                    Jl. Peternakan No. 88, Kecamatan Sukamaju, Bogor, Jawa Barat
-                    16123
+                    Jl. Raya Gempol No. 88, Gempol, Pasuruan, Jawa Timur
+                    67155
                   </p>
                 </div>
               </div>

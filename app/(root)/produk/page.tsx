@@ -2,8 +2,8 @@ import Products from "@/components/Products/Products";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Produk Telur Segar | Bima Eggs",
-  description: "Cek katalog telur ayam ras, omega 3, telur kampung, dan telur asin berkualitas tinggi dari Bima Eggs.",
+  title: "Produk Telur Segar | Juragan Telur",
+  description: "Cek katalog telur ayam berkualitas tinggi dari Juragan Telur.",
 };
 
 export default function Produk() {
