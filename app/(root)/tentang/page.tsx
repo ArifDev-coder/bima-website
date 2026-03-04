@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 
 export default function Tentang() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Header Section */}
-      <section className="bg-brand-secondary text-white py-20 text-center">
+      <section className="bg-brand-secondary text-white py-20 text-center" data-aos="fade-down">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Tentang Juragan Telur</h1>
         <p className="text-brand-accent max-w-2xl mx-auto text-lg">
           Lebih dari sekadar penjual telur, kami adalah mitra nutrisi keluarga Anda.
@@ -21,13 +21,13 @@ export default function Tentang() {
       <section className="py-16 px-6 max-w-5xl mx-auto space-y-24">
         {/* Story */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-64 md:h-full bg-brand-bg rounded-2xl overflow-hidden">
+          <div className="relative h-64 md:h-full bg-brand-bg rounded-2xl overflow-hidden" data-aos="fade-right">
              {/* Placeholder for an image */}
              <div className="absolute inset-0 flex items-center justify-center text-brand-secondary/20">
                 <History size={64} />
              </div>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-brand-primary p-2 rounded-lg text-white">
                 <History size={24} />
@@ -48,7 +48,7 @@ export default function Tentang() {
 
         {/* Vision & Mission */}
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-brand-bg p-8 rounded-2xl border border-brand-accent">
+          <div className="bg-brand-bg p-8 rounded-2xl border border-brand-accent" data-aos="fade-up" data-aos-delay="100">
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-brand-secondary p-2 rounded-lg text-white">
                 <Target size={24} />
@@ -61,7 +61,7 @@ export default function Tentang() {
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+          <div className="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm" data-aos="fade-up" data-aos-delay="200">
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-brand-primary p-2 rounded-lg text-white">
                 <Users size={24} />

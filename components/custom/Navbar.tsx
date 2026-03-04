@@ -7,7 +7,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useCart } from "@/lib/context/CartContext";
-import CartDrawer from "./CartDrawer";
+import dynamic from "next/dynamic";
+
+const CartDrawer = dynamic(() => import("./CartDrawer"), {
+  ssr: false, // Ensure client-side only rendering for heavy interactive components
+  loading: () => null, // Optional loading state
+});
 
 import BrandLogo from "@/public/Logo/brandlogo.png";
 

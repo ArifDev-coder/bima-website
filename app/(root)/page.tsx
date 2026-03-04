@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main>
       <div data-aos="fade-up">
         <Hero />
       </div>
