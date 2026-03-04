@@ -46,11 +46,12 @@ export default function Hero() {
             {/* INI DIA: Komponen Image Next.js */}
             <Image
               src={HeroEgg}
-              alt="Telur Segar Berkualitas"
-              fill // Biar gambarnya menutupi kontainer parent
-              priority // Prioritaskan loading karena ini gambar utama (LCP)
-              className="object-cover rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 brightness-80"
-              sizes="(max-width: 768px) 100vw, 50vw" // Responsive hint buat browser
+              alt="Telur Segar Berkualitas - Juragan Telur"
+              fill
+              priority
+              placeholder="blur"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+              className="object-cover rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 brightness-95"
             />
 
             {/* Floating Card Info */}

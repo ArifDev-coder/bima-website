@@ -6,8 +6,9 @@ import { AOSProvider } from "@/components/providers/AOSProvider";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta", // Kasih nama yang spesifik
-  weight: ["400", "500", "600", "700", "800"], // Tambahin weight biar bisa Bold/SemiBold
+  variable: "--font-plus-jakarta",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
