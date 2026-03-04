@@ -13,7 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Juragan Telur",
-  description: "Juragan Telur",
+  description: "Dapatkan telur ayam segar langsung dari peternakan. Juragan Telur menjamin kualitas dan kesegaran terbaik untuk nutrisi keluarga Anda.",
 };
 
 export default function RootLayout({
