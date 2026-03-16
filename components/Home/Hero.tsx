@@ -1,6 +1,7 @@
 import Image from "next/image"; // Import ini wajib!
 import { ShoppingCart, ArrowRight } from "lucide-react";
 import HeroEgg from "@/public/Home/heroegg.jpg";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -27,10 +28,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Link href="/produk">
             <button className="flex items-center justify-center gap-2 bg-brand-primary hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-brand-primary/30 transition-all hover:-translate-y-1 active:scale-95">
               <ShoppingCart size={22} />
               Pesan Sekarang
             </button>
+            </Link>
             <button className="flex items-center justify-center gap-2 bg-white border-2 border-brand-accent text-brand-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent transition-all">
               Lihat Katalog
               <ArrowRight size={22} />
