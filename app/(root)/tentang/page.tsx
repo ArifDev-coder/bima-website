@@ -27,7 +27,7 @@ export default function Tentang() {
                 <History size={64} />
              </div>
           </div>
-          <div data-aos="fade-left">
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-brand-primary p-2 rounded-lg text-white">
                 <History size={24} />
