@@ -34,10 +34,6 @@ export default function Hero() {
               Pesan Sekarang
             </button>
             </Link>
-            <button className="flex items-center justify-center gap-2 bg-white border-2 border-brand-accent text-brand-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-accent transition-all">
-              Lihat Katalog
-              <ArrowRight size={22} />
-            </button>
           </div>
         </div>
 

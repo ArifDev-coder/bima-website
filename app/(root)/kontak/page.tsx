@@ -31,8 +31,7 @@ export default function Kontak() {
                 <div>
                   <h3 className="font-bold text-stone-800">Alamat Kami</h3>
                   <p className="text-stone-600 text-sm">
-                    Jl. Raya Gempol No. 88, Gempol, Pasuruan, Jawa Timur
-                    67155
+                  Kavlingan Utara, Sumberingin, Rt04 Rw07, Sumbersuko, Gempol, Pasuruan
                   </p>
                 </div>
               </div>
@@ -59,11 +58,17 @@ export default function Kontak() {
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-stone-200 h-64 rounded-2xl flex items-center justify-center text-stone-500">
-            <span className="flex items-center gap-2">
-              <MapPin /> Peta Lokasi (Placeholder)
-            </span>
+          {/* Map Section */}
+          <div className="h-96 w-full rounded-2xl overflow-hidden border border-brand-accent">
+             <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459.88680437923637!2d112.6788842172597!3d-7.622723587191003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7d91aa2f3a9d1%3A0x8b768f7aa7b0cd2d!2s9MGH%2BXG9%2C%20Area%20Sawah%2FKebun%2C%20Sumbersuko%2C%20Kec.%20Gempol%2C%20Pasuruan%2C%20Jawa%20Timur%2067155!5e0!3m2!1sid!2sid!4v1774112164701!5m2!1sid!2sid" 
+                width="100%" 
+                height="100%" 
+                style={{ border:0 }} 
+                allowFullScreen={true}
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 

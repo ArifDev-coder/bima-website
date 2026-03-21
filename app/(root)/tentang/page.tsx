@@ -2,7 +2,7 @@ import { Users, Target, History } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tentang Kami | Juragan Telur",
+  title: "Tentang Kami | Toko Rizqy",
   description: "Pelajari sejarah dan komitmen Juragan Telur dalam menyediakan protein terbaik untuk keluarga sejak 2010.",
 };
 
@@ -11,7 +11,7 @@ export default function Tentang() {
     <div className="bg-white overflow-x-hidden">
       {/* Header Section */}
       <section className="bg-brand-secondary text-white py-20 text-center" data-aos="fade-down">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Tentang Juragan Telur</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Tentang Toko Rizqy</h1>
         <p className="text-brand-accent max-w-2xl mx-auto text-lg">
           Lebih dari sekadar penjual telur, kami adalah mitra nutrisi keluarga Anda.
         </p>
@@ -35,13 +35,13 @@ export default function Tentang() {
               <h2 className="text-2xl font-bold text-brand-secondary">Perjalanan Kami</h2>
             </div>
             <p className="text-stone-600 leading-relaxed mb-4">
-              Juragan Telur bermula dari sebuah peternakan kecil di kaki Gunung Bromo pada tahun 2010. 
+              Toko Rizqy bermula dari sebuah peternakan Telur Puyuh kecil di belakang rumah pada tahun 2020. 
               Dengan semangat untuk menyediakan sumber protein terjangkau namun berkualitas tinggi, 
               kami memulai dengan hanya 500 ekor ayam petelur.
             </p>
             <p className="text-stone-600 leading-relaxed">
-              Kini, kami telah berkembang menjadi pemasok telur terpercaya yang melayani ribuan keluarga, 
-              restoran, dan hotel di wilayah Gempol, Pasuruan, dan sekitarnya. Konsistensi dan integritas adalah kunci kami.
+              Kini, kami telah berkembang menjadi pemasok telur terpercaya yang melayani ratusan keluarga, 
+              pedagang, dan toko madura di daerah Gempol, Pasuruan, dan sekitarnya.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Tentang() {
               <h3 className="text-xl font-bold text-brand-secondary">Visi Kami</h3>
             </div>
             <p className="text-stone-700">
-              Menjadi penyedia telur ayam segar nomor satu di Indonesia yang dikenal karena 
+              Menjadi penyedia telur ayam segar yang terpercaya karena 
               kesegaran, kualitas, dan inovasi dalam peternakan berkelanjutan.
             </p>
           </div>

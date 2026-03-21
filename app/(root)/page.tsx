@@ -6,7 +6,7 @@ import CTA from "@/components/Home/CTA";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Juragan Telur | Pemasok Telur Ayam Segar & Berkualitas No. 1",
+  title: "Toko Rizqy",
   description:
     "Dapatkan telur ayam segar langsung dari peternakan. Juragan Telur menjamin kualitas dan kesegaran terbaik untuk nutrisi keluarga Anda.",
 };

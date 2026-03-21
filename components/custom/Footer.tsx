@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <p className="text-brand-accent/80 text-sm leading-relaxed">
             Menyediakan telur segar berkualitas tinggi langsung dari peternakan
-            ke meja makan Anda sejak 2010.
+            ke meja makan Anda sejak 2022.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <MapPin size={18} className="mt-0.5 text-brand-primary" />
               <span>
-                Jl. Raya Gempol No. 88, Gempol, Pasuruan, Jawa Timur
+                Kavlingan Utara, Sumberingin, Rt04 Rw07, Sumbersuko, Gempol, Pasuruan
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-brand-accent/20 text-center text-xs text-brand-accent/60">
-        <p>&copy; {new Date().getFullYear()} Juragan Telur. Hak Cipta Dilindungi.</p>
+        <p>&copy; {new Date().getFullYear()} TOKO RIZQY. Hak Cipta Dilindungi.</p>
       </div>
     </footer>
   );

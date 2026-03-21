@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShoppingCart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -16,15 +16,8 @@ export default function CTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/produk" 
-              className="bg-brand-secondary hover:bg-stone-800 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1"
-            >
-              <ShoppingCart size={20} />
-              Lihat Produk
-            </Link>
-            <Link 
               href="/kontak" 
-              className="bg-white hover:bg-brand-accent text-brand-secondary px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1"
+              className="bg-brand-secondary hover:bg-stone-800 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all hover:-translate-y-1"
             >
               Hubungi Kami
               <ArrowRight size={20} />

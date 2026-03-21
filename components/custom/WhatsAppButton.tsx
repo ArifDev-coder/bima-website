@@ -26,7 +26,7 @@ export default function WhatsAppButton() {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-bold">B</div>
               <div>
-                <p className="font-bold text-sm">Juraga Telur Admin</p>
+                <p className="font-bold text-sm">Admin Toko Rizqy</p>
                 <p className="text-[10px] opacity-90">Siap Melayani</p>
               </div>
             </div>
