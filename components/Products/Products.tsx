@@ -1,12 +1,16 @@
 'use client'
 
-import { Check, ShoppingCart } from "lucide-react";
+import { Check, MessageCircle } from "lucide-react";
 import { products } from "@/data/produk";
 import Image from "next/image";
-import { useCart } from "@/lib/context/CartContext";
+import { NoWa1 } from "@/data/NoWa";
 
 const Products = () => {
-  const { addToCart } = useCart();
+
+  const handleOrder = (productName: string) => {
+    const message = `Halo, saya tertarik dengan produk ${productName}. Apakah stoknya masih tersedia?`;
+    window.open(`https://wa.me/${NoWa1}?text=${encodeURIComponent(message)}`, "_blank");
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,15 +50,13 @@ const Products = () => {
               ))}
             </ul>
 
-            <div className="mt-auto flex items-center justify-between pt-4 border-t border-stone-100">
-              <span className="text-lg font-bold text-brand-primary">
-                {product.price}
-              </span>
+            <div className="mt-auto pt-4 border-t border-stone-100">
               <button 
-                onClick={() => addToCart(product)}
-                className="bg-brand-secondary hover:bg-brand-primary text-white p-2 rounded-lg transition-colors"
+                onClick={() => handleOrder(product.name)}
+                className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                <ShoppingCart size={20} />
+                <MessageCircle size={20} />
+                Kirim Pesan
               </button>
             </div>
           </div>

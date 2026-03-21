@@ -1,22 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Menu, X, ShoppingCart } from "lucide-react"; // Tambah icon Egg biar lucu
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { useCart } from "@/lib/context/CartContext";
-import dynamic from "next/dynamic";
-
-const CartDrawer = dynamic(() => import("./CartDrawer"), {
-  ssr: false, // Ensure client-side only rendering for heavy interactive components
-  loading: () => null, // Optional loading state
-});
 
 import BrandLogo from "@/public/Logo/brandlogo.png";
 
-// Sesuaikan menu dengan jualan telur
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
   { name: "Produk", href: "/produk" },
@@ -26,11 +18,9 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
-  const { totalItems } = useCart();
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -69,7 +59,7 @@ export default function Navbar() {
               />
             </div>
             <span className="font-black text-xl tracking-tight text-stone-900">
-              Juragan <span className="text-white">Telur</span>
+              Toko <span className="text-white">Rizqy</span>
             </span>
           </Link>
 
@@ -96,19 +86,6 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-2">
-            {/* Cart Button */}
-            <button
-              onClick={() => setIsCartOpen(true)}
-              className="relative p-2 text-stone-900 hover:bg-black/5 rounded-lg transition-colors group"
-            >
-              <ShoppingCart size={24} />
-              {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-brand-primary text-white text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full border-2 border-amber-500 shadow-sm group-hover:scale-110 transition-transform">
-                  {totalItems}
-                </span>
-              )}
-            </button>
-
             {/* Mobile Toggle */}
             <button
               ref={toggleRef}
@@ -149,7 +126,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>
   );
 }
