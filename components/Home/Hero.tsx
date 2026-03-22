@@ -52,14 +52,6 @@ export default function Hero() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
               className="object-cover rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 brightness-95"
             />
-
-            {/* Floating Card Info */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-brand-accent z-20">
-              <p className="text-brand-primary font-bold text-2xl">Rp 26.500</p>
-              <p className="text-stone-400 text-xs font-medium">
-                Harga Per Kilo Hari Ini
-              </p>
-            </div>
           </div>
         </div>
       </div>
