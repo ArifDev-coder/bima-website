@@ -1,3 +1,4 @@
+import { KritikSaranForm } from "@/components/Home/KritikSaranForm";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -53,6 +54,16 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-extrabold text-brand-secondary">Bagikan Pendapat Anda</h3>
+            <p className="text-stone-600 mt-2">Kami sangat menghargai ulasan Anda untuk membantu kami menjadi lebih baik.</p>
+          </div>
+          <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-brand-accent">
+            <KritikSaranForm />
+          </div>
         </div>
       </div>
     </section>
