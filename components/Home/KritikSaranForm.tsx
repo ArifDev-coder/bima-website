@@ -35,7 +35,9 @@ const KritikSaranForm: React.FC = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const message = `Halo, saya *${values.name}* ingin memberikan testimoni:\n\n${values.review}`;
+    const message = `Halo, saya *${values.name}* ingin memberikan testimoni:
+
+${values.review}`;
     const whatsappUrl = `https://wa.me/${NoWa1}?text=${encodeURIComponent(
       message
     )}`;
