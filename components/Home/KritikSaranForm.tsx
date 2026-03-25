@@ -1,4 +1,5 @@
 "use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -13,39 +14,37 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { NoWa } from "@/data/NoWa";
-import { toast } from "sonner";
+import { NoWa1 } from "data/NoWa";
 
-const FormSchema = z.object({
+const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Nama harus lebih dari 2 karakter.",
+    message: "Nama wajib diisi",
   }),
-  message: z.string().min(10, {
-    message: "Pesan harus lebih dari 10 karakter.",
+  review: z.string().min(10, {
+    message: "Ulasan minimal 10 karakter",
   }),
 });
 
-export function KritikSaranForm() {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+const KritikSaranForm: React.FC = () => {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      message: "",
+      review: "",
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    const message = `Halo, saya ${data.name}, ingin memberikan testimoni: ${data.message}`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${NoWa}?text=${encodedMessage}`;
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    const message = `Halo, saya *${values.name}* ingin memberikan testimoni:\n\n${values.review}`;
+    const whatsappUrl = `https://wa.me/${NoWa1}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(whatsappUrl, "_blank");
-
-    toast.success("Terima kasih atas ulasan Anda!");
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="name"
@@ -53,7 +52,7 @@ export function KritikSaranForm() {
             <FormItem>
               <FormLabel>Nama Anda</FormLabel>
               <FormControl>
-                <Input placeholder="Contoh: Budi" {...field} />
+                <Input placeholder="John Doe" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -61,14 +60,13 @@ export function KritikSaranForm() {
         />
         <FormField
           control={form.control}
-          name="message"
+          name="review"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Ulasan Anda</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Bagaimana pendapat Anda tentang produk dan layanan kami?"
-                  className="resize-none"
+                  placeholder="Berikan ulasan Anda di sini..."
                   {...field}
                 />
               </FormControl>
@@ -76,10 +74,10 @@ export function KritikSaranForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
-          Kirim Testimoni
-        </Button>
+        <Button type="submit">Kirim Testimoni</Button>
       </form>
     </Form>
   );
-}
+};
+
+export default KritikSaranForm;
