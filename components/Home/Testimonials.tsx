@@ -1,3 +1,4 @@
+import KritikSaranForm from "@/components/Home/KritikSaranForm";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -8,53 +9,45 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Pak Budi",
-    role: "Pengusaha Martabak",
-    quote: "Kualitas telur Juragan Telur konsisten. Ukurannya besar-besar dan jarang ada yang pecah saat pengiriman.",
+    name: "Bapak Agung",
+    role: "Pemilik Warung Makan",
+    quote: "Pelanggan saya selalu puas dengan kualitas telur dari sini. Konsisten, bersih, dan ukurannya pas.",
     rating: 5,
   },
   {
-    name: "Sinta",
-    role: "Mahasiswi",
-    quote: "Suka banget sama pelayanan adminnya yang ramah. Pengiriman juga cepat sampai kosan.",
-    rating: 4,
+    name: "Mbak Sari",
+    role: "Pecinta Kue",
+    quote: "Kue buatan saya jadi lebih mengembang dan warnanya cantik. Beda banget kualitasnya sama telur biasa.",
+    rating: 5,
   },
 ];
 
-export default function Testimonials() {
+const Testimonials: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-bg relative overflow-hidden">
-      {/* Decorative Background */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('/bg-pattern.svg')] opacity-5"></div>
-      
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-brand-primary font-bold tracking-wider uppercase text-sm">Testimoni</span>
-          <h2 className="text-4xl font-extrabold text-brand-secondary mt-2">Kata Mereka Tentang Kami</h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((item, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-brand-accent hover:shadow-xl transition-all duration-300">
-              <div className="flex gap-1 text-brand-primary mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill={i < item.rating ? "currentColor" : "none"} strokeWidth={i < item.rating ? 0 : 2} className={i < item.rating ? "" : "text-gray-300"} />
+    <section id="testimonials" className="py-12 md:py-24 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8 md:mb-12">Apa Kata Mereka?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <p className="text-stone-600 mb-6 italic">&quot;{item.quote}&quot;</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center font-bold text-brand-secondary">
-                  {item.name[0]}
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-secondary">{item.name}</h4>
-                  <p className="text-xs text-stone-500">{item.role}</p>
-                </div>
-              </div>
+              <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
+              <p className="text-right font-semibold">- {testimonial.name}</p>
+              <p className="text-right text-sm text-gray-500">{testimonial.role}</p>
             </div>
           ))}
+        </div>
+        <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6">Bagikan Pendapat Anda</h3>
+            <KritikSaranForm />
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Testimonials;
