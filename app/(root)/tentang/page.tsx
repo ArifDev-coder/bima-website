@@ -37,7 +37,7 @@ export default function Tentang() {
             <p className="text-stone-600 leading-relaxed mb-4">
               Toko Rizqy bermula dari sebuah peternakan Telur Puyuh kecil di belakang rumah pada tahun 2020. 
               Dengan semangat untuk menyediakan sumber protein terjangkau namun berkualitas tinggi, 
-              kami memulai dengan hanya 500 ekor ayam petelur.
+              kami memulai dari 1000 burung puyuh petelur, lalu mengganti dagangan ke ayam telur yang dikirim oleh agen dan kami salurkan ke berbagai daerah.
             </p>
             <p className="text-stone-600 leading-relaxed">
               Kini, kami telah berkembang menjadi pemasok telur terpercaya yang melayani ratusan keluarga, 
