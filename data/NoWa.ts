@@ -1,2 +1,2 @@
-export const NoWa1 = "6281233135690";
-export const NoWa2 = "6282233378780";
+export const NoWa1 = "81233135690";
+export const NoWa2 = "82233378780";

@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { NoWa1 } from "data/NoWa";
+import { NoWa2 } from "data/NoWa";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -38,7 +38,7 @@ const KritikSaranForm: React.FC = () => {
     const message = `Halo, saya *${values.name}* ingin memberikan testimoni:
 
 ${values.review}`;
-    const whatsappUrl = `https://wa.me/${NoWa1}?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/${NoWa2}?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
